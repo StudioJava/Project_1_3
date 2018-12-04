@@ -9,14 +9,14 @@
 <link href="css/bootstrap-4.0.0.css" rel="stylesheet">
 <link rel="stylesheet" href="css/main_1_3.css">
 </head>
-<body class="text-center">
+<body id="body" class="text-center">
 <!-- body code goes here -->
 <div class="cover-container d-flex h-100 mx-auto flex-column text-white">
-  <div class="inner">
+  <section id="section-1" class="inner">
     <header>
       <div class="main-nav"> <a class="style-logo" href="#"><img src="images/facebook-logo.png" alt=""></a> </div>
     </header>
-    <main>
+   
       <h1 class="lead pt-3">New Account</h1>
       <div class="p-5">
 		   <div class="form-group">
@@ -35,8 +35,40 @@
       
         <button onClick="addUser()"  class="btn btn-primary mt-3">Submit</button>
       </div>
-    </main>
-  </div>
+  </section>
+	<!-- Section 2 & 3 -->
+	
+	  <section id="section-2">
+		  <div id="loader"></div>
+		  </section>
+  <section id="section-3" style="display: none;" class="inner animate-bottom">
+    <header>
+      <div class="main-nav"> <a class="style-logo" href="#"><img src="images/facebook-logo.png" alt=""></a> </div>
+    </header>
+    
+      <h1 class="lead pt-3">Confirm Account</h1>
+      <div class="p-5">
+		   <div class="form-group">
+          <label for="exampleInputEmail1">User Name</label>
+          <input type="text" class="form-control" id="inputUserName2" aria-describedby="emailHelp" placeholder="Enter user name">
+          </div>
+      <!--<div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="inputUserEmail" aria-describedby="emailHelp" placeholder="Enter email">
+          <small id="emailHelp" class="form-text text-warning">We'll never share your email with anyone else.</small> 
+       </div>-->
+		   <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="inputUserPassword2" placeholder="Password">
+		  </div>
+		  <div id="display" style="min-height: 50px"></div>
+        
+      
+        <button onClick="checkCredentials()"  class="btn btn-primary mt-3">Submit</button>
+      </div>
+	   <div id="displayMessage"></div>
+    
+  </section>
 </div>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
